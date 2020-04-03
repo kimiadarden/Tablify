@@ -10,8 +10,8 @@ const PasswordForgetPage = () => (
     <Container>
     <Jumbotron>  
     <div className="Row">
-    <div className="col-md-4 offset-md-4">
-    <h1>Reset Password </h1>
+    <div className="col-md-12 login-box">
+    <h1 className="text-center" style={{fontFamily: "'Fredoka One', cursive"}}>Reset Password </h1>
     <PasswordForgetForm />
     </div>
         </div>
@@ -48,8 +48,10 @@ class PasswordForgetFormBase extends Component {
     const isInvalid = email === '';
     return (
       <form onSubmit={this.onSubmit}>
-         <div className="form-group">
+         <div className="form-group text-center">
         <input
+         style={{margin: "auto", marginTop: "1%", marginBottom: "1%"}}
+         className="form-control input2"
           name="email"
           value={this.state.email}
           onChange={this.onChange}
@@ -57,13 +59,17 @@ class PasswordForgetFormBase extends Component {
           placeholder="Email Address"
           />
           </div>
-          <div className="form-group">
+          <div className="form-group text-center">
 
-        <button disabled={isInvalid} type="submit">
+        <button disabled={isInvalid} type="submit" className="btn btn-primary">
           Reset My Password
         </button>
           </div>
-        {error && <p>{error.message}</p>}
+
+          <div style={{margin: "0 auto", fontStyle: "monospace"}} className="text-center">
+          {error && <mark>{error.message}</mark>}
+        </div>	       
+
       </form>
     );
   }

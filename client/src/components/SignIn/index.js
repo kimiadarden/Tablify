@@ -86,7 +86,9 @@ class SignInFormBase extends Component {
           Continue
         </button>
         </div>
-        {error && <p>{error.message}</p>}
+        <div style={{margin: "0 auto"}} className="text-center">
+          {error && <mark className="error-message">{error.message}</mark>}
+        </div>
       </form>
     );
   };

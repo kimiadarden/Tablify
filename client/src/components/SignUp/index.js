@@ -5,18 +5,19 @@ import * as ROUTES from '../../constants/routes';
 import { compose } from 'recompose';
 import Container from '../Container'
 import Jumbotron from '../Jumbotron'
+import './signupstyle.css';
 
 const SignUpPage = () => (
   <div>
     <Container>
       <Jumbotron>
-        <div className="Row">
-          <div class="col-md-4 offset-md-4">
-            <h1>Sign Up</h1>
+        <div className="row">
+          <div class="col-md-12 login-box">
+            <h1 className="text-center" style={{fontFamily: "'Fredoka One', cursive"}}>Sign Up</h1>
             <br />
             <SignUpForm />
-            <p>
-              Already have an account? <Link to={ROUTES.SIGN_IN}>Sign in</Link>
+            <p style={{textAlign: "center", fontFamily: "monospace"}}>
+              Already have an account? <Link to={ROUTES.SIGN_IN} style={{fontFamily: "'Marck Script', cursive", fontSize: "20px", textDecoration: "underline"}}>Sign in</Link>
             </p>
           </div>
         </div>
@@ -119,10 +120,10 @@ class SignUpFormBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        Name:
-        <div className="form-group">
+        <div className="form-group text-center">
           <input
-            className="form-control"
+            style={{margin: "auto", marginTop: "1%", marginBottom: "1%"}}
+            className="form-control input2"
             name="username"
             value={username}
             onChange={this.onChange}
@@ -130,10 +131,10 @@ class SignUpFormBase extends Component {
             placeholder="Full Name"
           />
         </div>
-        E-mail:
-        <div className="form-group">
+        <div className="form-group text-center">
           <input
-            className="form-control"
+            style={{margin: "auto", marginTop: "1%", marginBottom: "1%"}}
+            className="form-control input2"
             name="email"
             value={email}
             onChange={this.onChange}
@@ -141,10 +142,10 @@ class SignUpFormBase extends Component {
             placeholder="Email Address"
           />
         </div>
-        Password:
-        <div className="form-group">
+        <div className="form-group text-center">
           <input
-            className="form-control"
+            style={{margin: "auto", marginTop: "1%", marginBottom: "1%"}}
+            className="form-control input2"
             name="passwordOne"
             value={passwordOne}
             onChange={this.onChange}
@@ -152,10 +153,10 @@ class SignUpFormBase extends Component {
             placeholder="Password"
           />
         </div>
-        Confirm Password:
-        <div className="form-group">
+        <div className="form-group text-center">
           <input
-            className="form-control"
+            style={{margin: "auto", marginTop: "1%", marginBottom: "5%"}}
+            className="form-control input2"
             name="passwordTwo"
             value={passwordTwo}
             onChange={this.onChange}
@@ -163,10 +164,12 @@ class SignUpFormBase extends Component {
             placeholder="Confirm Password"
           />
         </div>
-        <div className="form-group">
-          <button disabled={isInvalid} type="submit">Sign Up</button>
+        <div className="form-group text-center">
+          <button disabled={isInvalid} type="submit" className="btn btn-primary">Sign Up</button>
         </div>
-        {error && <p>{error.message}</p>}
+        <div style={{margin: "0 auto", fontStyle: "monospace"}} className="text-center">
+          {error && <mark>{error.message}</mark>}
+        </div>
       </form>
     );
   }
