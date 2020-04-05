@@ -8,6 +8,7 @@ import SignUp from "./components/SignUp"
 import PasswordForgetPage from './components/PasswordForget';
 import { withAuthentication } from './components/Session';
 import Account from './pages/Account';
+import Employees from './pages/Employees';
 
 const App = () => (
   <Router>
@@ -19,6 +20,7 @@ const App = () => (
       <Route exact path="/SignUp" component={SignUp} />
       <Route exact path="/Kitchen" component={Kitchen} />
       <Route exact path="/Account" component={Account} />
+      <Route exact path="/Employees" component={Employees} />
     </Fragment>
   </Router>
 )

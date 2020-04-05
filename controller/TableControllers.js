@@ -1,12 +1,30 @@
 const db = require("../models");
 
 module.exports = {
+  
   findAllEmployee: function(req, res) {
     db.Employee
       .find(req.query)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
+  createNewEmployee: function(req, res) {
+    console.log("Hello")
+    console.log(req.body)
+    db.Employee
+    .create(req.body)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
+  },
+
+  updateEmployee: function(req,res){
+    db.Employee
+      .findOneAndUpdate({ _id: req.params.id })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
   removeEmployeeById: function(req, res) {
     db.Employee
       .findById({ _id: req.params.id })

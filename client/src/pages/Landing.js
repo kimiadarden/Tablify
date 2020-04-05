@@ -57,5 +57,4 @@ function LandingAuth (authUser) {
   )
 }
 
-
 export default Landing;

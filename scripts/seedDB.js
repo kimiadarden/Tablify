@@ -59,7 +59,7 @@ const MenuSeed = [
   },
   {
     item:'sticky toffee pudding',
-    category:'desert',
+    category:'Dessert',
     price:'19.99',
     cook_time:'10',
     createdAt:Date(),
@@ -67,7 +67,7 @@ const MenuSeed = [
   },
   {
     item:'cranberry souffle',
-    category:'desert',
+    category:'Dessert',
     price:'17.99',
     cook_time:'10',
     createdAt:Date(),

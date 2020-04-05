@@ -65,12 +65,12 @@ class SignUpFormBase extends Component {
           email,
         });
       })
-      .then(() => {
-        return this.props.firebase.doSendEmailVerification();
-      })
+      // .then(() => {
+      //   return this.props.firebase.doSendEmailVerification();
+      // })
       .then(() => {
         this.setState({ ...INITIAL_STATE });
-        this.props.history.push(ROUTES.HOME);
+        this.props.history.push(ROUTES.LANDING);
       })
       .catch(error => {
         if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
