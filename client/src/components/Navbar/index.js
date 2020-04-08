@@ -9,18 +9,6 @@ function Navbar() {
       <Link className="navbar-brand" to="/">
         Home
       </Link>
-      <div>
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <Link
-              to="/search"
-              className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
-            >
-              Search
-            </Link>
-          </li>
-        </ul>
-      </div>
     </nav>
   );
 }
