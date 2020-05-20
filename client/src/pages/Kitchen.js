@@ -27,7 +27,7 @@ function Kitchen() {
 
   console.log(tables)
   return (
-    <div>
+    <>
         <Navbar/>
         {tables ? (
           <>
@@ -42,7 +42,7 @@ function Kitchen() {
             <>
             </>
             )}
-    </div>
+    </>
   );
 }
 
