@@ -83,7 +83,7 @@ function EmployeeModal(props) {
     }
 
     return (
-      <div>
+      <>
         <Button variant="primary" className="mt-0" onClick={handleShow}>
           Edit
         </Button>
@@ -156,7 +156,7 @@ function EmployeeModal(props) {
             </Button>
           </Modal.Footer>
         </Modal>
-      </div>
+      </>
     );
   }
 
