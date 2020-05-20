@@ -30,11 +30,16 @@ function OrderingSysLargeModal(props) {
         let value = parseInt(event.target.value);
         let name = event.target.name;
         let price = parseFloat(event.target.id);
-        console.log("value, price: ", value, ", ", price)
-        orderedDish.push(name)
-        orderedDishCount.push(value)
-        totalPrice += value * price;
-        console.log(totalPrice)
+        console.log("value, price: ", value, ", ", price);
+        if (!isNaN(value)) {
+            orderedDish.push(name);
+            orderedDishCount.push(value);
+            totalPrice += value * price;
+        }
+        // orderedDish.push(name);
+        // orderedDishCount.push(value);
+        // totalPrice += value * price;
+        // console.log(totalPrice)
     }
 
     function deleteTable(event) {
