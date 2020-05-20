@@ -22,6 +22,7 @@ function EmployeeModal(props) {
       email: props.employee.email
     })
 
+
     function handleInputChange(event){
       const { name, value } = event.target;
       setError("");
@@ -82,7 +83,7 @@ function EmployeeModal(props) {
     }
 
     return (
-      <>
+      <div>
         <Button variant="primary" className="mt-0" onClick={handleShow}>
           Edit
         </Button>
@@ -155,7 +156,7 @@ function EmployeeModal(props) {
             </Button>
           </Modal.Footer>
         </Modal>
-      </>
+      </div>
     );
   }
 
