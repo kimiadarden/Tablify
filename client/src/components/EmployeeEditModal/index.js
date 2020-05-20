@@ -22,6 +22,7 @@ function EmployeeModal(props) {
       email: props.employee.email
     })
 
+
     function handleInputChange(event){
       const { name, value } = event.target;
       setError("");
