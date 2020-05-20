@@ -68,7 +68,7 @@ function OrderListModal(props) {
                             })
                         }
                     </ul>
-                    <h3 className="mb-3"><span style={{textDecoration: "underline"}}>Total Price:</span> $<span style={{fontWeight: "bolder"}}>{props.table.total_price.toFixed(2)}</span></h3>
+                    <h3 className="mb-3"><span style={{textDecoration: "underline"}}>Total Price:</span> $<span style={{fontWeight: "bolder"}}>{props.table.total_price}</span></h3>
 
                 </Modal.Body>
                 <div className="container">
